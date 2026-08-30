@@ -14,12 +14,9 @@ npm config set registry https://registry.npmmirror.com
 
 ## 运行
 
-课程源码在 `pack/` 里，clone 之后先解包：
-
 ```bash
 git clone https://github.com/suntianjing/xianchang-shouce.git
 cd xianchang-shouce
-sh restore.sh
 export PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 npm install
 npm run dev
@@ -28,13 +25,14 @@ npm run dev
 Windows Git Bash 同上。CMD：
 
 ```bat
-sh restore.sh
 set PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
 npm install
 npm run dev
 ```
 
 浏览器打开终端提示的地址，默认 http://127.0.0.1:8080/
+
+`npm install` 时跳过 Playwright 浏览器，课程不需要它。`postinstall` 会把 Vue2 / Vue3 运行时拷到 `public/vendor/`，课里的演示才跑得起来。
 
 ## 里面有什么
 

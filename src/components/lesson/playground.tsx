@@ -48,7 +48,7 @@ function srcdoc(version: 2 | 3, template: string, script: string, components?: s
     const comps = components?.trim() ? `components: { ${components} },` : "";
     return `<!doctype html><html><head><meta charset="utf-8"/><style>${PLAYGROUND_CSS}</style></head><body>
 <div id="app"></div>
-<script src="/vendor/vue3.global.js"><\\/script>
+<script src="/vendor/vue3.global.js"><\/script>
 <script>
 try {
   const { createApp, ref, reactive, computed, watch, watchEffect, onMounted, onUnmounted, nextTick, provide, inject, shallowRef, markRaw, toRaw } = Vue;
@@ -68,11 +68,11 @@ function report() {
 report();
 setTimeout(report, 60);
 new ResizeObserver(report).observe(document.body);
-<\\/script></body></html>`;
+<\/script></body></html>`;
   }
   return `<!doctype html><html><head><meta charset="utf-8"/><style>${PLAYGROUND_CSS}</style></head><body>
 <div id="app"></div>
-<script src="/vendor/vue2.min.js"><\\/script>
+<script src="/vendor/vue2.min.js"><\/script>
 <script>
 try {
   new Vue({
@@ -89,7 +89,7 @@ function report() {
 report();
 setTimeout(report, 60);
 new ResizeObserver(report).observe(document.body);
-<\\/script></body></html>`;
+<\/script></body></html>`;
 }
 
 export function Playground({
