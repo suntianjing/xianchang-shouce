@@ -1,0 +1,10 @@
+node_modules
+dist
+.output
+.vercel
+.nitro
+screenshots
+artifacts
+*.log
+.DS_Store
+public/xianchang-shouce.zip
