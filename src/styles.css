@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f3eee4;
+  --color-paper: #faf6ee;
+  --color-paper-2: #efe8d9;
+  --color-ink: #1a1614;
+  --color-muted: #6f675f;
+  --color-faint: #948c83;
+  --color-line: #d8d0c3;
+  --color-accent: #9b2335;
+  --color-accent-fg: #faf6ee;
+  --color-accent-soft: #f4e4e4;
+  --color-code: #161210;
+  --color-code-fg: #ebe4d6;
+  --color-ok: #2c6a4d;
+  --color-warn: #8a5414;
+  --color-wrong: #9b2335;
+
+  --font-sans: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Segoe UI", system-ui, sans-serif;
+  --font-display: "Noto Serif SC", "Songti SC", "Noto Serif", "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", "Sarasa Mono SC", ui-monospace, "SF Mono", Menlo,
+    Consolas, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+
+  --shadow-border: 0 0 0 1px rgba(26, 22, 20, 0.06), 0 1px 2px -1px rgba(26, 22, 20, 0.06),
+    0 2px 8px 0 rgba(26, 22, 20, 0.04);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-ink);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-ink);
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: var(--font-mono);
+  }
+
+  pre {
+    max-width: 100%;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-accent) 22%, transparent);
+    color: var(--color-ink);
+  }
+}
